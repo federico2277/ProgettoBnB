@@ -86,18 +86,16 @@
 
     $idStruttura = 0;
 
-    while ($row = mysqli_fetch_assoc ($result)) //solo associativo
+    echo "<div class='divdestro' style='width: 55%;margin-top:5%;margin-right:5%'>
+    <div class='row'>";
+    while ($row = mysqli_fetch_assoc ($result)) 
     {
         
         $idStruttura = $row['idStruttura'];
         $PrezzoStruttura = $row['PrezzoStruttura'];
         $prezzoTotale = 0;
         $prezzoTotale = $PrezzoStruttura * $giorni  ; 
-        echo "<div class='divdestro' style='width: 55%;margin-top:5%;margin-right:5%'>
-        <div class='row'>";
 
-    while ($row = mysqli_fetch_assoc ($result)) //solo associativo
-    {
         
         $idStruttura = $row['idStruttura'];
         $PrezzoStruttura = $row['PrezzoStruttura'];
@@ -127,8 +125,6 @@
     }
     echo "</div>
     </div>";
-
-    }
 
 
     $_SESSION['Check-in'] = $_POST['Check-in'];
