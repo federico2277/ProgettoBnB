@@ -1,0 +1,200 @@
+footer {
+    font-family: "Digital-7 Mono", sans-serif;
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(0, 170, 255) 0px 0px 4px, rgb(0, 170, 255) 0px 0px 8px, rgb(0, 170, 255) 0px 0px 12px, rgb(0, 170, 255) 0px 0px 16px;
+    background-color: black;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    padding: 10px;
+}
+body{
+    background-color: #333;
+}
+main {
+    max-width: 75%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+section {
+    margin-bottom: 40px;
+}
+  
+.sfondo {
+    background-color: black;
+}
+.testonav {
+    font-family: "Digital-7 Mono", sans-serif;
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(0, 170, 255) 0px 0px 4px, rgb(0, 170, 255) 0px 0px 8px, rgb(0, 170, 255) 0px 0px 12px, rgb(0, 170, 255) 0px 0px 16px;
+    letter-spacing: 4px;
+    text-align: center;
+}
+.nav {
+    box-shadow: rgb(255, 255, 255) 0px 0px 5px, rgb(255, 255, 255) 0px 0px 10px, rgb(255, 255, 255) 0px 0px 15px, rgb(0, 170, 255) 0px 0px 20px, rgb(0, 170, 255) 0px 0px 30px, rgb(0, 170, 255) 0px 0px 40px, rgb(0, 170, 255) 0px 0px 55px;
+    background-color: rgb(51, 51, 51);
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 25px;
+}
+.Dricerca {
+    background-color: rgb(51, 51, 51);
+    width: 24%;
+    border-radius: 25px;
+    margin: 5px;
+}
+.datadiv {
+    width: 60%;
+    text-align: center;
+    border-radius: 25px;
+    text-shadow: rgb(0, 170, 255) 0px 0px 4px, rgb(0, 170, 255) 0px 0px 8px, rgb(0, 170, 255) 0px 0px 12px, rgb(0, 170, 255) 0px 0px 16px;
+    color: #fff;
+    background-color: #333;
+}
+.divsinistro {
+    float: left;
+    width: 50%;
+}
+.divdestro {
+    float: right;
+    width: 50%;
+}
+.regioni {
+    width: 20%;
+    margin-left: 10%;
+    background-color: rgb(51, 51, 51);
+    display: none;
+    color: rgb(255, 255, 255);
+    box-shadow: rgb(255, 255, 255) 0px 0px 5px, rgb(255, 255, 255) 0px 0px 10px, rgb(255, 255, 255) 0px 0px 15px, rgb(0, 170, 255) 0px 0px 20px, rgb(0, 170, 255) 0px 0px 30px, rgb(0, 170, 255) 0px 0px 40px, rgb(0, 170, 255) 0px 0px 55px;
+    border: 2px solid white;
+    text-shadow: rgb(0, 170, 255) 0px 0px 4px, rgb(0, 170, 255) 0px 0px 8px, rgb(0, 170, 255) 0px 0px 12px, rgb(0, 170, 255) 0px 0px 16px;
+    border-radius: 25px;
+}
+.ospiti {
+    display: none;
+    width: 19%;
+    margin-left: 70%;
+    background-color: rgb(51, 51, 51);
+    box-shadow: rgb(255, 255, 255) 0px 0px 5px, rgb(255, 255, 255) 0px 0px 10px, rgb(255, 255, 255) 0px 0px 15px, rgb(0, 170, 255) 0px 0px 20px, rgb(0, 170, 255) 0px 0px 30px, rgb(0, 170, 255) 0px 0px 40px, rgb(0, 170, 255) 0px 0px 55px;
+    border-image: initial;
+    border-radius: 25px;
+    color: #fff;
+}
+.Ospitidiv {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+}
+.divisione {
+    margin-left: 10px;
+    margin-right: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: lightgray;
+    border-image: initial;
+}
+.divsotto {
+    display: block;
+}
+.inputnav {
+    text-align: center;
+    text-shadow: rgb(0, 170, 255) 0px 0px 4px, rgb(0, 170, 255) 0px 0px 8px, rgb(0, 170, 255) 0px 0px 12px, rgb(0, 170, 255) 0px 0px 16px;
+    width: 80%;
+    box-shadow: rgb(255, 255, 255) 0px 0px 5px, rgb(255, 255, 255) 0px 0px 10px, rgb(255, 255, 255) 0px 0px 15px, rgb(0, 170, 255) 0px 0px 20px, rgb(0, 170, 255) 0px 0px 30px, rgb(0, 170, 255) 0px 0px 40px, rgb(0, 170, 255) 0px 0px 55px;
+    border: 2px solid white;
+    background-color: #333;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    border-radius: 25px;
+}
+.divricercadue{
+    box-shadow: rgb(255, 255, 255) 0px 0px 5px, rgb(255, 255, 255) 0px 0px 10px, rgb(255, 255, 255) 0px 0px 15px, rgb(0, 170, 255) 0px 0px 20px, rgb(0, 170, 255) 0px 0px 30px, rgb(0, 170, 255) 0px 0px 40px, rgb(0, 170, 255) 0px 0px 55px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: lightgray;
+    border-image: initial;
+    border-radius: 25px;
+    width: 50%;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+.cardnath{
+    box-shadow: rgb(255, 255, 255) 0px 0px 5px, rgb(255, 255, 255) 0px 0px 10px, rgb(255, 255, 255) 0px 0px 15px, rgb(0, 170, 255) 0px 0px 20px, rgb(0, 170, 255) 0px 0px 30px, rgb(0, 170, 255) 0px 0px 40px, rgb(0, 170, 255) 0px 0px 55px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: lightgray;
+    border-image: initial;
+    border-radius: 25px;
+    margin: 5%;
+    background-color: #333;
+}
+.cardbodynath{
+    background-color: #333;
+    color: white;
+
+}
+.imgcard{
+    background-color: #333;
+    height: 200px;
+    border-image: initial;
+    border-radius: 10px;
+
+}
+.icons{
+    display: flex;
+    column-gap: 50px;
+    justify-content: center;
+}   
+.icon {
+    display: inline-flex;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    outline: 2px solid #fff; transition-property:
+    outline-offset, outline-color, background-color;
+    transition-duration: 0.25s;
+}
+.icon:hover {
+    outline-offset: 4px;
+}
+.icon i {
+margin: auto;
+}
+.icon:hover i {
+animation: shake 0.25s;
+}
+@keyframes shake{
+    10%{
+        transform: rotate(15deg);
+    }
+    20%{
+        transform: rotate(-15deg);
+    }
+    30%{
+        transform: rotate(15deg);
+    }
+    40%{
+        transform: rotate(-15deg);
+    }
+}
+.imaginere{
+    width: 70%;
+}
+.imagine1{
+    width: 50%;
+    display: flex;
+    float: left;
+}
+.imagine2{
+    width: 50%;
+    height: 50%;
+    float: right;
+}
+.imagineispira{
+    border-radius: 25px;
+}

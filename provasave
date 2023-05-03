@@ -1,0 +1,8 @@
+    <footer>
+	<p>&copy; Progetto creato da Federico Borrometi e Giacomo Vasquez</p>
+    <div class="icons">
+        <i class="icon fa fa-twitter" style="font-size: 270%;padding-top: 5px;"></i>
+        <i class="icon fa fa-instagram" style="font-size: 270%;padding-top: 5px;"></i>
+        <i class="icon fa fa-github" style="font-size: 270%;padding-top: 5px;"></i>
+    </div>
+    </footer>
