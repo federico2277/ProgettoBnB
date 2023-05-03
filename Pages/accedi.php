@@ -18,44 +18,44 @@ session_start();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="../Script/MyScript.js"></script>
     <head>
-<body>
+<body style="background-color: #333;">
     <nav class="navbar sfondo">
                 <a href="../index.php"><h1 class= "testonav">BnB Italia</h1></a>
                 <div style="float: right;margin-right: 10px;">
-                <a href="registrati.php" class="btn btn-primary" tabindex="-1" role="button" aria-disabled="true">Registrati</a>
-                <a href="accedi.php" class="btn  btn btn-outline-primarybtn btn-outline-primary" tabindex="-1" role="button" aria-disabled="true" >Accedi</a>
     </nav>
 
-    <h1>accedi</h1>
+    <h1 class="testonav">accedi</h1>
 <form action="log-in.php" method="post">
-    <div class="container text-center">
-        <div class="row">
-            <div class="col">
-                <label for="exampleFormControlInput1" class="col-sm-2 col-form-label">Email</label>
-                <input type="email" class="form-control"  required name="Email" id="exampleFormControlInput1" placeholder="name@example.com">
+    <div class="nav" >
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <label for="exampleFormControlInput1" class="col-sm-2 col-form-label"><p class="testonav">Email</p></label>
+                <center>  <input type="email" class="form-control testonav  "  required name="Email" id="exampleFormControlInput1" placeholder="name@example.com" style="width:50%;"></center>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="container text-center">
-        <div class="row">
-            <div class="col">
-                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-                <input type="password"  required name="Pass" class="form-control" id="inputPassword">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <label for="inputPassword" class="col-sm-2 col-form-label"><p class="testonav">Password</p></label>
+                    <center><input type="password"  required name="Pass" class="form-control testonav " style="width:50%;" id="inputPassword"></center>
+                </div>
+            </div>
+        </div>
+        
+        <br><br><br><br><br>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <input type="submit" class="btn button_neo"  style="color:white;"   value="invia i dati">
+                    <a href='../index.php'  class="btn button_neo"  style="color:white;" tabindex='-1' role='button' aria-disabled='true'>esci</a>
+                </div>
+                <br><br>
             </div>
         </div>
     </div>
-    
-    <br><br>
-    <div class="container text-center">
-        <div class="row">
-            <div class="col">
-                <input type="submit"class="btn btn-outline-succes" value="invia i dati">
-                <a href='index.php' class='btn btn-outline-succes' tabindex='-1' role='button' aria-disabled='true'>esci</a>
-            </div>
-        </div>
-    </div>
-
 
 </form>
 </body>

@@ -16,7 +16,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="../Script/MyScript.js"></script> </head>
  </head>
-<body>
+<body style="background-color: #333;">
     <nav class="navbar sfondo">
                 <a href="../index.php"><h1 class= "testonav">BnB Italia</h1></a>
                 <div style="float: right;margin-right: 10px;">
@@ -64,7 +64,7 @@
             echo "<h1>Registrazione effetuata</h1>";
             if($_SESSION['controlloIndex'] == 0){
                 $_SESSION['accesso']=true;
-                echo "<a href='index.php' class='btn btn-outline-secondary' tabindex='-1' role='button' aria-disabled='true'>esci</a>";
+                echo "<a href='../index.php' class='btn btn-outline-secondary' tabindex='-1' role='button' aria-disabled='true'>esci</a>";
             }else{
                 $_SESSION['accesso']=true;
                 echo "<a href='Pagamento.php' class='btn btn-outline-secondary' tabindex='-1' role='button' aria-disabled='true'>esci</a>";
@@ -73,7 +73,7 @@
             if($_SESSION['controlloIndex'] == 0){
                 echo "<h1>Registrazione non effetuata Utente gia esistente</h1>";
                 echo "<a href='registrati.php' class='btn btn-outline-secondary' tabindex='-1' role='button' aria-disabled='true'>riprova</a>";
-                echo "<a href='index.php' class='btn btn-outline-secondary' tabindex='-1' role='button' aria-disabled='true'>esci</a>";
+                echo "<a href='../index.php' class='btn btn-outline-secondary' tabindex='-1' role='button' aria-disabled='true'>esci</a>";
             }else{
                 echo "<h1>Registrazione non effetuata Utente gia esistente</h1>";
                 echo "<a href='registrati.php' class='btn btn-outline-secondary' tabindex='-1' role='button' aria-disabled='true'>riprova</a>";

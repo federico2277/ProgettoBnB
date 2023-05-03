@@ -14,14 +14,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="../Script/MyScript.js"></script> </head>
-<body>
+<body style="background-color: #333;">
     <nav class="navbar sfondo">
                 <a href="../index.php"><h1 class= "testonav">BnB Italia</h1></a>
                 <div style="float: right;margin-right: 10px;">
                 <a href="registrati.php" class="btn btn-primary" tabindex="-1" role="button" aria-disabled="true">Registrati</a>
                 <a href="accedi.php" class="btn  btn btn-outline-primarybtn btn-outline-primary" tabindex="-1" role="button" aria-disabled="true" >Accedi</a>
     </nav>
-   <h1>conferma e paga</h1>
+<h1>conferma e paga</h1>
 
     <h2>il tuo viaggio</h2>
 
@@ -36,12 +36,6 @@
     echo $_SESSION['Check-out'];
     echo "</h5>";
 ?>
-<h2>Modifica date </h2>
-    <form action="Ricerca.php" method="post">
-        <input type="date" name="Check-in">
-        <input type="date" name="Check-out">
-        <input type="submit" value="Modifica">
-    </form>
 <h2>Costo totale</h2>
 <?php 
     echo "<h5>";

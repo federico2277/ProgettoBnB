@@ -4,7 +4,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Style/MyStyle.css" >
-	<title>Struttuura</title>
+	<title>Struttura</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-sN/raN39GHQ/I9Z3qNllY71t+GK/1ydmA74wJpRr+PzrCNbIJnk2X9q3Pf0lnlULJl/YtGkiLkbwD1Stsy2Hbw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,9 +19,9 @@
     <nav class="navbar sfondo">
                 <a href="../index.php"><h1 class= "testonav">BnB Italia</h1></a>
                 <div style="float: right;margin-right: 10px;">
-                <a href="registrati.php" class="btn btn-primary" tabindex="-1" role="button" aria-disabled="true">Registrati</a>
-                <a href="accedi.php" class="btn  btn btn-outline-primarybtn btn-outline-primary" tabindex="-1" role="button" aria-disabled="true" >Accedi</a>
     </nav>
+    <main>
+    <section>
     <?php
     session_start();
     $_SESSION['idStruttura'] = $_POST['idStruttura'];
@@ -35,7 +35,7 @@
     while ($row = mysqli_fetch_assoc ($result)) //solo associativo
     {
         $nome = $row['nome'];
-        echo "<h1>";
+        echo "<h1 class='testonav'>";
         echo $nome ;
         echo "</h1>";
         $Stanze = $row['Stanze'];
@@ -49,44 +49,54 @@
     $giorni = abs($differenza/(60 * 60)/24);
     $prezzoTotale = 0;
     $prezzoTotale = $PrezzoStruttura * $giorni  ; 
-    echo $_SESSION['adulti'];
     $_SESSION['prezzoTotale'] = $prezzoTotale;
     ?>
+        <img src="<?php echo $imgPrincipale ?>" class="Struturaimg" alt="...">
+        <div class="divisione" style="margin-top:100px;"></div>
+    <?php 
+        echo "<div style='width: 100%;'>";
+    echo" <div class='divinfoSS'><h1 class='testonav'>Informazione struttura</h1>
+    <h2 style='color:white;'>". $info ."</h2>";
+    echo "  <div style='width:100%;height:120px'>
+    <div class='divsinistroicona' ><img src='../image/bagno.png' alt='bagno' style='width: 100px;'></div>
+    <div class='divdestroicona'><h3 class='testonav'>Numero di bagni:<span>";
+    echo  $Bagni ;
+    echo "</span></h3></div>
+    </div>";
+    echo "  <div style='width:100%; 120px'>
+    <div class='divsinistroicona'><img src='../image/stanza.png' alt='bagno' style='width: 100px;'></div>
+    <div class='divdestroicona'><h3 class='testonav'>Numero di stanze:<span>";
+    echo  $Stanze ;
+    echo "</span></h3></div>
+    </div>";
 
-    <div id="carouselExample" class="carousel slide">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-        <img src="<?php echo $imgPrincipale ?>" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="...">
-        </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-    </div>
-    
-    <form action="Pagamento.php" method="post">
-        <input type="date" name="Check-in" value="<?php echo $_SESSION['Check-in'] ?>">
-        <input type="date" name="Check-out" value="<?php echo $_SESSION['Check-out'] ?>">
-        <input type="number"  name="Aldulti" min="1" value="<?php echo $_SESSION['Aldulti'] ?>">
-        <input type="number" name="Bambini" value="<?php echo $_SESSION['Bambini'] ?>" >
-        <input type="number" name="Animali" value="<?php echo $_SESSION['Animali'] ?>">
-        <input type="submit" class="btn btn-danger" value="Prenota">
-        </form>
-    <h1>costo totale <?php echo $prezzoTotale ;
-   // echo"</h1>  <h2>". $info ."</h2>";
+
+    echo "</div>";
+
+
+        echo "<div class='divinfostruts'> ";
+        echo "<div class='divinfo'><h4><span class='testonav'>";
+        echo $prezzoTotale ;
+        echo "$ </span>Prezzo struttura</h4> </div> ";
+
+        echo "<center><div class='divinfoCi' ><div style='margin:5%;'><h5 class='testonav' style='margin-top:10px'>Check-in:</h5> <h3 style='color:white'>";
+        echo  $_SESSION['Check-in'];
+        echo "</h3></div> </div>";
+        echo "<div class='divinfoCO'>  <div style='margin:5%;'><h5 class='testonav'>Check-out:</h5><h3 style='color:white'>";
+        echo  $_SESSION['Check-out'] ;  
+        echo "</h3></div> </div></center>" ;    
+        echo "<div class='divinfo'  style='margin-top:10px;' > <center>";  
+            echo "<h4 class='testonav'> Adulti :</h4> ";
+            echo  $_SESSION['adulti'] ;
+            echo "<h4 class='testonav'>Bambini :</h4> ";
+                echo  $_SESSION['Bambini'] ;
+                echo "<h4 class='testonav'> Animali :</h4> ";
+                echo  $_SESSION['Animali'] ;
+        echo "</center></div>";
+        echo " <center><a href='Pagamento.php' class='btn btn-outline-secondary bottoneNath' tabindex='-1' role='button' aria-disabled='true' >Procedi</a></center>";
+        echo " </div></div>";
+
     ?>
-    
-
+        
 </body>
 </html>

@@ -11,17 +11,24 @@ footer {
 }
 body{
     background-color: #333;
+    
 }
 main {
     max-width: 75%;
     margin: 0 auto;
     padding: 20px;
-  }
-  
+}
+.button_neo{
+    color:white;
+    text-shadow: rgb(0, 170, 255) 0px 0px 4px, rgb(0, 170, 255) 0px 0px 8px, rgb(0, 170, 255) 0px 0px 12px, rgb(0, 170, 255) 0px 0px 16px;
+    border-radius: 25px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 5px, rgb(255, 255, 255) 0px 0px 10px, rgb(255, 255, 255) 0px 0px 15px, rgb(0, 170, 255) 0px 0px 20px, rgb(0, 170, 255) 0px 0px 30px, rgb(0, 170, 255) 0px 0px 40px, rgb(0, 170, 255) 0px 0px 55px;
+    background-color: rgb(51, 51, 51);
+}
 section {
     margin-bottom: 40px;
 }
-  
+
 .sfondo {
     background-color: black;
 }
@@ -89,12 +96,14 @@ section {
     padding: 10px;
 }
 .divisione {
+
     margin-left: 10px;
     margin-right: 10px;
     border-width: 1px;
     border-style: solid;
-    border-color: lightgray;
-    border-image: initial;
+    border-color: white;
+    box-shadow: rgb(255, 255, 255) 0px 0px 5px, rgb(255, 255, 255) 0px 0px 10px, rgb(255, 255, 255) 0px 0px 15px, rgb(0, 170, 255) 0px 0px 20px, rgb(0, 170, 255) 0px 0px 30px, rgb(0, 170, 255) 0px 0px 40px, rgb(0, 170, 255) 0px 0px 55px;
+
 }
 .divsotto {
     display: block;
@@ -187,7 +196,6 @@ animation: shake 0.25s;
 }
 .imagine1{
     width: 50%;
-    display: flex;
     float: left;
 }
 .imagine2{
@@ -197,4 +205,81 @@ animation: shake 0.25s;
 }
 .imagineispira{
     border-radius: 25px;
+}
+.testoinfo{
+    color: white;
+}
+.Struturaimg{
+    width: 100%;
+    border-radius: 15px;
+}
+.divinfostruts{
+    float: right;
+    width: 40%;
+    box-shadow: rgb(255, 255, 255) 0px 0px 5px, rgb(255, 255, 255) 0px 0px 10px, rgb(255, 255, 255) 0px 0px 15px, rgb(0, 170, 255) 0px 0px 20px, rgb(0, 170, 255) 0px 0px 30px, rgb(0, 170, 255) 0px 0px 40px, rgb(0, 170, 255) 0px 0px 55px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-image: initial;
+    border-radius: 25px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.divinfo{
+    margin: 10%;
+    color:white ;
+}
+.divinfoCi{
+    float: left;
+    width: 45%;
+    height: 80px;
+    box-shadow: white;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-image: initial;
+    border-radius: 25px 0 0 25px ;
+    margin-right: 0%;
+    margin-left: 5%;
+    
+}
+.divinfoCO{
+    float: right;
+    width: 45%;
+    height: 80px;
+    box-shadow: white;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-image: initial;
+    border-radius: 0 25px 25px 0;
+    margin-left: 0%;
+    margin-right: 5%;
+    
+}
+
+.bottoneNath{
+    margin-bottom: 10%;
+}
+.divinfoSS{
+    float: left;
+    width: 50%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.divsinistroicona{
+    float: left;
+    width: 15%;
+}
+.divdestroicona{
+    margin-top: 35px;
+    float: right;
+    width:85%;
+}
+.natinput{
+    width: 50%;
 }

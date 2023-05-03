@@ -15,7 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="../Script/MyScript.js"></script> </head>
 
-<body>
+<body style="background-color: #333;">
 <?php
     session_start();
     include "../Componets/Connessione.php";
@@ -52,5 +52,8 @@
     die ("Query fallita " . mysqli_error($connessione) . " " . mysqli_errno($connessione));
 
 ?>
+
+<h1>Hai prenotato La struttura Con successo il codice della prenotazione</h1>
+<a href='../index.php' class='btn btn-outline-succes' tabindex='-1' role='button' aria-disabled='true'>Ritorna nell Index</a>
 </body>
 </html>

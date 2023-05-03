@@ -30,8 +30,9 @@
 <nav class="navbar sfondo">
             <h1 class= "testonav">BnB Italia</h1>
             <div style="float: right;margin-right: 10px;">
-            <a href="./Pages/registrati.php" class="btn btn-primary" tabindex="-1" role="button" aria-disabled="true">Registrati</a>
-            <a href="./Pages/accedi.php" class="btn  btn btn-outline-primarybtn btn-outline-primary" tabindex="-1" role="button" aria-disabled="true" >Accedi</a>
+            <a href="./Pages/registrati.php" class="btn button_neo" style="color:white;" tabindex="-1" role="button" aria-disabled="true">Registrati</a>
+            <a href="./Pages/accedi.php" class=" btn button_neo" tabindex="-1" role="button" aria-disabled="true" style="color:white;">Accedi</a>
+            <a href="./Pages/Affitta.php" class="btn button_neo"  style="color:white;" tabindex="-1" role="button" aria-disabled="true" >Affitta</a>
 </nav>
 
 <form action="Pages/Ricerca.php" method="post">
@@ -39,29 +40,29 @@
             <div class="Dricerca" onclick="bgDove()" id="dove" >
                 <center>
                     <h5 class="testonav">Dove vuoi risiedere?</h5>
-                    <input class="inputnav" type="text" name="Dove" style="border:lightgray;margin-top:5%;color: lightgray;" id="dovein" value="cerca dove allogiare">
+                    <input required class="inputnav" type="text" name="Dove" style="border:lightgray;margin-top:5%;color: lightgray;" id="dovein" value="cerca dove allogiare">
                 </center>
             </div>
             <div class="Dricerca" onclick="bgCheckin()" id="checkin">
                 <center>
                     <h5 class="testonav">Check-in</h5>
-                    <input type="date" name="Check-in" style="margin-top: 5%;" class="datadiv">
+                    <input required type="date" name="Check-in" style="margin-top: 5%;" class="datadiv">
                 </center>
             </div>
             <div class="Dricerca" onclick="bgCheckout()" id="Checkout" >
                 <center>
                     <h5 class="testonav">Check-out</h5>
-                    <input type="date" name="Check-out" style="margin-top: 5%;" class="datadiv">
+                    <input required type="date" name="Check-out" style="margin-top: 5%;" class="datadiv">
                 </center>
             </div>
             <div class="Dricerca" onclick="NascondiOspiti()" id="divO">
             <div class="divsinistro">
                 <h5 class="testonav">Ospiti</h5>
                 <br>
-                <p id="valO" style="color: #fff; padding-bottom:2%;margin-left:6%;">1 Ospite Adulto</p>
+                <p id="valO" class="testonav" style="color: #fff; padding-bottom:2%;margin-left:6%;">1 Ospite Adulto</p>
             </div>
             <div class="divdestro">
-                <input type="submit" value="cerca" class="btn btn-outline-primary" style="float: right;margin: 15%;">
+                <input required type="submit" value="cerca"  class="btn button_neo" style="float: right;margin: 15%; color:white;">
             </div>
             </div>
         </div>
@@ -70,30 +71,62 @@
 
         <div class="regioni" id="regioni">
         <div class="row" style="margin: 2%;">
-        <div class="col-4" id="Lazio" onclick="inserimento('Lazio')">
-            <img src="image/Lazio.png" class="imaginere">
-            <h5 class="nRegione" id="Regione">Lazio</h1>
-        </div>
-        <div class="col-4"  id="Toscana" onclick="inserimento('Toscana')">
-        <img src="image/Toscana.png" class="imaginere">
-            <h5 class="nRegione" id="Regione">Toscana</h1>
-        </div>
-        <div class="col-4"  id="Sicilia" onclick="inserimento('Sicilia')">
-        <img src="image/Sicilia.png" class="imaginere">
-            <h5 class="nRegione" id="Regione">Sicilia</h1>
-        </div>
-        <div class="col-4"  id="Puglia" onclick="inserimento('Puglia')">
-        <img src="image/Puglia.png" class="imaginere">
-            <h5 class="nRegione" id="Regione">Puglia</h1>
-        </div>
-        <div class="col-4"  id="Lombardia" onclick="inserimento('Lombardia')">
-        <img src="image/Lombardia.png" class="imaginere">
-            <h5 class="nRegione" id="Regione">Lombardia</h1>
-        </div>
-        <div class="col-4"  id="Campania" onclick="inserimento('Campania')">
-        <img src="image/campania.png" class="imaginere">
-            <h5 class="nRegione" id="Regione">Campania</h1>
-        </div>
+            <div class="col-4" id="Lazio" onclick="inserimento('Lazio')">
+                <img src="image/Lazio.png" class="imaginere">
+                <h5 class="nRegione" id="Regione">Lazio</h1>
+            </div>
+            <div class="col-4"  id="Toscana" onclick="inserimento('Toscana')">
+                <img src="image/Toscana.png" class="imaginere">
+                <h5 class="nRegione" id="Regione">Toscana</h1>
+            </div>
+            <div class="col-4"  id="Sicilia" onclick="inserimento('Sicilia')">
+                <img src="image/Sicilia.png" class="imaginere">
+                <h5 class="nRegione" id="Regione">Sicilia</h1>
+            </div>
+            <div class="col-4"  id="Puglia" onclick="inserimento('Puglia')">
+                <img src="image/Puglia.png" class="imaginere">
+                <h5 class="nRegione" id="Regione">Puglia</h1>
+            </div>
+            <div class="col-4"  id="Lombardia" onclick="inserimento('Lombardia')">
+                <img src="image/Lombardia.png" class="imaginere">
+                <h5 class="nRegione" id="Regione">Lombardia</h1>
+            </div>
+            <div class="col-4"  id="Campania" onclick="inserimento('Campania')">
+                <img src="image/campania.png" class="imaginere">
+                <h5 class="nRegione" id="Regione">Campania</h1>
+            </div>
+            <div class="col-4" id="Abruzzo" onclick="inserimento('Abruzzo')">
+                <img src="image/Abruzzo.png" class="imaginere">
+                <h5 class="nRegione" id="Regione">Abruzzo</h1>
+            </div>
+            <div class="col-4" id="Lazio" onclick="inserimento('Calabria')">
+                <img src="image/Calabria.png" class="imaginere">
+                <h5 class="nRegione" id="Regione">Calabria</h1>
+            </div>
+            <div class="col-4" id="Lazio" onclick="inserimento('Piemonte')">
+                <img src="image/Piemonte.png" class="imaginere">
+                <h5 class="nRegione" id="Regione">Piemonte</h1>
+            </div>
+            <div class="col-4" id="Lazio" onclick="inserimento('Veneto')">
+                <img src="image/Veneto.png" class="imaginere">
+                <h5 class="nRegione" id="Regione">Veneto</h1>
+            </div>
+            <div class="col-4" id="Lazio" onclick="inserimento('Liguria')">
+                <img src="image/Liguria.png" class="imaginere">
+                <h5 class="nRegione" id="Regione">Liguria</h1>
+            </div>
+            <div class="col-4" id="Lazio" onclick="inserimento('Marche')">
+                <img src="image/Marche.png" class="imaginere">
+                <h5 class="nRegione" id="Regione">Marche</h1>
+            </div>
+            <div class="col-4" id="Lazio" onclick="inserimento('Friuli')">
+                <img src="image/Friulia.png" class="imaginere">
+                <h5 class="nRegione" id="Regione">Friuli</h1>
+            </div>
+            <div class="col-4" id="Lazio" onclick="inserimento('Emilia-Romangna')">
+                <img src="image/Emilia-Romangna.png" class="imaginere">
+                <h5 class="nRegione" id="Regione">Emilia-Romangna</h1>
+            </div>
         </div>
         
         </div>
@@ -148,28 +181,28 @@
     <main style="padding-top: 100px;">
         <section>
             <h1 class="testonav" >Spunti per l'estetica</h1>
-            <div style="width: 100%;">
+            <div style="width: 100%;;height:700px;">
                 <div class="imagine1"> 
-                    <img src="./image/ideeProgetto2.jpg" alt="" style="width: 100%;height:100%;padding-right:5%" class="imagineispira">
+                    <img src="./image/ideeProgetto2.jpg" alt="" style="width: 100%;padding-right:5%;height:700px;"  class="imagineispira">
                 </div>
                 <div class="imagine2">
-                    <img src="./image/ideeProgetto1.jpg" alt=""style="width: 100%;margin-bottom:5%; "class="imagineispira">
+                    <img src="./image/ideeProgetto1.jpg" alt=""style="width: 100%;height:100%;margin-bottom:5%; "class="imagineispira">
                 </div>
                 <div class="imagine2">
-                    <img src="./image/ideeProgetto3.jpg" alt=""style="width: 100%;" class="imagineispira">
+                    <img src="./image/ideeProgetto3.jpg" alt=""style="width: 100%;height:100%;" class="imagineispira">
                 </div>
             </div>
-            <div style="width: 100%;">
-            </div>
-            <p>Ci siamo ispirati a vari concetti per l'estetica del sito .
+            <div style="width: 100%;margin-top:10px">
+            <p class="testoinfo">
+                Ci siamo ispirati a vari concetti per l'estetica del sito .
                 La prima è la scritture al neon essendo molto belle piene di luce e colore (secondo).
                 Poi continuando con il colore abbiamo scelto basandoci sui neon uno style alla cyberpunk (ottimo style sia a livello visivo che a livello estetico).
                 In fine la tersa foto un po scontata ma il B&B è la propia base di tutto quindi nulla.
             </p>
+            </div>
             <div class="divisione"></div>
         </section>
     </main>
-    
 
 </body>
 </html>

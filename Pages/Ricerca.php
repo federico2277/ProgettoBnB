@@ -21,15 +21,27 @@
     <nav class="navbar sfondo">
                 <a href="../index.php"><h1 class= "testonav">BnB Italia</h1></a>
                 <div style="float: right;margin-right: 10px;">
-                <a href="registrati.php" class="btn btn-primary" tabindex="-1" role="button" aria-disabled="true">Registrati</a>
-                <a href="accedi.php" class="btn  btn btn-outline-primarybtn btn-outline-primary" tabindex="-1" role="button" aria-disabled="true" >Accedi</a>
     </nav>
     <form action="Ricerca.php" method="post">
     <div class="divsinistro"style="width: 35%;">
         <div class="divricercadue" >
             <center>
                 <h5 class="testonav" style="margin: 2%;">Dove?</h5>
-                <input type="text" name="Dove" style="margin: 2%;">
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="Dove" style="width: 50%;text-align: center;">
+                    <option >Toscana</option>
+                    <option >Lazio</option>
+                    <option >Sicilia</option>
+                    <option >Abruzzo</option>
+                    <option >Lombardia</option>
+                    <option >Campania</option>
+                    <option >Friuli</option>
+                    <option >Veneto</option>
+                    <option >Calabria</option>
+                    <option >Puglia</option>
+                    <option >Liguria</option>
+                    <option >Marche</option>
+                    <option >Emilia-Romangna</option>
+                </select>
                 <h5 class="testonav" style="margin: 2%;">inserisci quando vuoi partire</h5>
                 <input type="date" name="Check-in" style="margin-top: 2%;" class="datadiv">
                 <h5 class="testonav" style="margin: 2%;">inserisci quando vuoi tornare</h5>
@@ -59,10 +71,9 @@
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
-
                     </select>
                 <br>
-                <input type="submit" class="btn btn-outline-primary" value="Cerca" style="margin: 2%;">
+                <input type="submit" class="btn button_neo" value="Cerca" style="color:white;margin: 2%;">
             </center>
             </form>
         </div>
@@ -100,7 +111,11 @@
         $idStruttura = $row['idStruttura'];
         $PrezzoStruttura = $row['PrezzoStruttura'];
         $prezzoTotale = 0;
-        $prezzoTotale = $PrezzoStruttura * $giorni  ; 
+        if($giorni == 0){
+         $prezzoTotale = $PrezzoStruttura * 1  ;
+        }else{
+            $prezzoTotale = $PrezzoStruttura * $giorni;
+        }
         echo "<div class='col-4 ' style='background-color: #333;'>
         <div class='card cardnath'>
             <img src='";
@@ -108,15 +123,15 @@
             echo "' class='imgcard' alt='...'>
             <div class='card-body cardbodynath' >
                 <h5 class='testonav'>Hotel</h5>
-                <p style='color: white;'><b>";
+                <p class='testonav'><b>";
                 echo $PrezzoStruttura; 
-                echo "€</b> a notte  .  in totale costa: ";
+                echo "€</b> a notte  .     in totale costa: ";
                 echo $prezzoTotale; 
                 echo"</p>
                 <center>
                 <form action='Struttura.php' method='post'>
                 <input type='hidden' name='idStruttura' value='$idStruttura'>
-                <input class='btn btn-primary' type='submit' value='prenota'>
+                <input type='submit' class='btn button_neo ' style='color:white;' value='prenota'>
                 </form>
                 </center>
             </div>
@@ -139,14 +154,6 @@
 
         </section>
     </main>
-    <footer class="divsotto">
-	<p>&copy; Progetto creato da Federico Borrometi e Giacomo Vasquez</p>
-    <div class="icons">
-        <i class="icon fa fa-twitter" style="font-size: 270%;padding-top: 5px;"></i>
-        <i class="icon fa fa-instagram" style="font-size: 270%;padding-top: 5px;"></i>
-        <i class="icon fa fa-github" style="font-size: 270%;padding-top: 5px;"></i>
-    </div>
-    </footer>
     <script src="Script/MyScript.js"></script>
 </body>
 </html>

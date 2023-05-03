@@ -35,13 +35,9 @@ function NascondiOspiti(){
     document.getElementById("Checkout").style.backgroundColor = "#333";//div check-out
     document.getElementById("divO").style.backgroundColor="lightgray";
     document.getElementById("ospiti").style.display= "block";
+    document.getElementById("valO").style.textShadow= "rgb(0, 170, 255) 0px 0px 4px, rgb(0, 170, 255) 0px 0px 8px, rgb(0, 170, 255) 0px 0px 12px, rgb(0, 170, 255) 0px 0px 16px";
 }
-function inserimentoLazio() {
-    document.getElementById("dovein").value="Lazio";
-}
-function inserimento() {
-    document.getElementById("dovein").value="Toscana";
-}
+
 function inserimento(x){
     document.getElementById("dovein").value=x;
 }
