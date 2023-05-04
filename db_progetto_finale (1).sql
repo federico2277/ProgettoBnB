@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Mag 04, 2023 alle 23:41
+-- Creato il: Mag 04, 2023 alle 23:49
 -- Versione del server: 10.4.25-MariaDB
 -- Versione PHP: 8.1.10
 
@@ -43,10 +43,8 @@ CREATE TABLE `affituario` (
 --
 
 INSERT INTO `affituario` (`Cod_Fiscale`, `Nome`, `Cognome`, `Data_nascita`, `Id_Prenotazione`, `Email`, `Telefono`, `Pass`) VALUES
-('123ASDdasdsad', ' Borrometi', 'Federico', '2023-05-21', 43, ' federico22giulia@gmail.com', '3201932041', 'asd'),
 ('BRRFRC04R22D612G', ' Federico', 'Borrometi', '2004-10-03', 39, 'federico22giulia@gmail.com', '3201932041', 'federicoborrometi'),
-('dfs', ' Federicosdf', 'Borrometi', '2023-05-07', NULL, ' federico22giulia@gmail.com', '3201932041', 'sdfsdf'),
-('VASSADQWEWEWEWEW', ' Giacomo', 'vasquez', '2003-08-22', 49, ' giacomo@gmail.com', '23445634534', 'giacomo');
+('VSQGMF22MPO612O', ' Giacomo', 'vasquez', '2003-08-22', 49, ' giacomo@gmail.com', '23445634534', 'giacomo');
 
 -- --------------------------------------------------------
 
@@ -106,15 +104,6 @@ INSERT INTO `struttura` (`idStruttura`, `Nome`, `Locazione`, `Stanze`, `Bagni`, 
 (4, 'I Vivai', 'Lazio', 4, 2, '200', 'https://a0.muscache.com/im/pictures/9fb5f1b0-4ad7-4d25-9536-9f8303a3bb8f.jpg?im_w=1200', 'Benvenuti al cottage \" Les Ganades\", situato a Jollain-Merlin. Una dependance rinnovata e moderna all\'interno dei vivai di Lesdain vi permetterà di avere un momento di tranquillità godendo delle diverse attività della regione del Brunehaut.'),
 (5, 'Occidental Aran Park', 'Lazio', 2, 1, '140', 'https://a0.muscache.com/im/pictures/73c09c0a-2871-4196-990f-c5063c6f2dff.jpg?im_w=1200', 'Da un complesso agricolo originario di fine ‘800, circondato da alberi di ulivo secolari, nasce il Residence Sant’Alessandro.'),
 (6, 'Residence Sant\'Alessandro', 'Lazio', 12, 6, '111', 'https://a0.muscache.com/im/pictures/miso/Hosting-771518085627603442/original/91009acf-0201-42cd-8e58-bef6cbd362ab.jpeg?im_w=1200', 'Avrete a disposizione un monolocale di circa 25mq con un letto matrimoniale, un divano letto, angolo cottura e bagno con doccia. Si trova all\'interno del nostro giardino. Ci troviamo a 30 minuti in macchina da Roma e 15 minuti dal mare (Fregene, Maccarese). A 2 minuti a piedi si trova il supermercato Conad.'),
-(7, 'Residence Rizzante', 'Veneto', 14, 7, '100', NULL, 'il quartiere di Monteverde Vecchio è situato in un\'area residenziale tra le + belle di Roma,a pochi minuti dal centro,ci sono 2 parchi,uno si chiama Villa Pamphili ed è il + grande della città,e l\'altro Villa Sciarra,dove si può fare jogging e picnic.è un quartiere pieno di verde,e anche della vista panoramica + mozzafiato del mondo,infatti in pochi minuti si può arrivare al Gianicolo dove si può ammirare tutta Roma.Puoi raggiungere facilmente qualsiasi sito turistico della città,dal Vaticano,a'),
-(8, 'La Venezia', 'Veneto', 6, 3, '90', NULL, NULL),
-(9, 'Centro Vacanze Pra\' delle Torri', 'Veneto', 14, 2, '180', NULL, NULL),
-(10, 'Imperial', 'Emiglia-Romagna', 5, 1, '260', NULL, NULL),
-(11, 'Smy Bologna Centrale', 'Emiglia-Romagna', 7, 2, '200', NULL, NULL),
-(12, 'Bentivogli Home', 'Emiglia-Romagna', 12, 4, '240', NULL, NULL),
-(15, 'Faro di Casetta al Faro', 'Toscana', 1, 1, '47', '', 'Comoda casetta appena ristrutturata a 600 metri dal Faro della Penisola Maddalena, giardino curato, aria condizionata  e wifi. \r\nImmersa nella riserva naturale del Plemmirio, a pochi chilometri da Siracusa.'),
-(16, 'Faro di Casetta al Faro', 'Toscana', 1, 1, '47', '', 'Comoda casetta appena ristrutturata a 600 metri dal Faro della Penisola Maddalena, giardino curato, aria condizionata  e wifi. \r\nImmersa nella riserva naturale del Plemmirio, a pochi chilometri da Siracusa.'),
-(17, 'Faro di Casetta al Faro', 'Toscana', 1, 1, '47', '', 'Comoda casetta appena ristrutturata a 600 metri dal Faro della Penisola Maddalena, giardino curato, aria condizionata  e wifi. \r\nImmersa nella riserva naturale del Plemmirio, a pochi chilometri da Siracusa.'),
 (18, 'Le Cabanon Guest House.', 'Sicilia', 4, 1, '60', 'https://a0.muscache.com/im/pictures/74007ced-1580-4fd3-9250-13253d8bcab8.jpg?im_w=1440', 'Le Cabanon, immerso nelle campagne della Valle dell#Anapo tra agrumeti e uliveti, è la dependance della Villa padronale, può ospitare fino a quattro persone.'),
 (19, 'Il Lazio', 'Lazio', 4, 2, '110', 'https://www.prefabbricatisulweb.it/immagini/aziende/nicoli-legnami/4043.jpg', 'dfsdffsdfsadfsdf'),
 (20, 'Federico', 'Sicilia', 4, 2, '110', 'https://a0.muscache.com/im/pictures/74007ced-1580-4fd3-9250-13253d8bcab8.jpg?im_w=1440', 'asdsadasd'),
