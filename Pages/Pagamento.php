@@ -68,17 +68,11 @@
     echo "<h4><span class='testonav'>";
     echo $_SESSION['prezzoTotale'];
     echo "$ </span>Prezzo struttura.</h4> </div> ";
-    echo $_SESSION['accesso'];
-        if ($_SESSION['accesso']==true) {   
-            echo "<center>"; 
-            echo "<a href='Prenotazione_Struttura.php' class='btn bottoneNath btn-outline-secondary button_neo' style='color:white;' tabindex='-1' role='button' aria-disabled='true'>Vai al pagamento</a>";
-            echo "</center>"; 
-        }else if ($_SESSION['accesso']==false) {
-            echo "<center>"; 
-            echo "<a href='Prenotazione_Struttura.php' class='btn bottoneNath btn-outline-secondary button_neo' style='color:white;' disabled tabindex='-1' role='button' aria-disabled='true'>Vai al pagamento</a>";
-            echo "</center>"; 
-        }
-        ?>      </div>
+    ?>
+        <center>
+        <a href='Prenotazione_Struttura.php' class='btn bottoneNath btn-outline-secondary button_neo' style='color:white;' disabled tabindex='-1' role='button' aria-disabled='true'>Vai al pagamento</a>
+        </center>
+     </div>
             </div>
         </div>
         </section>
