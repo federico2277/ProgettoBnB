@@ -16,41 +16,74 @@
     <script src="../Script/MyScript.js"></script>
 </head>
 <body style="background-color: #333;">
-<h1>benevuti nella registrazione della propia struttura</h1>
-<h3>Inserisci i valori richiesti</h3>
-    <form action="Registrazione_struttura.php" method="post" enctype="multipart/form-data">
-        <h5>Locazione della Struttura:</h5>
-        <select name="Locazione" >
-                    <option >Toscana</option>
-                    <option >Lazio</option>
-                    <option >Sicilia</option>
-                    <option >Abruzzo</option>
-                    <option >Lombardia</option>
-                    <option >Campania</option>
-                    <option >Friuli</option>
-                    <option >Veneto</option>
-                    <option >Calabria</option>
-                    <option >Puglia</option>
-                    <option >Liguria</option>
-                    <option >Marche</option>
-                    <option >Emilia-Romangna</option>
-                </select>
-            <h5>Nome Struttura</h5>
-            <input type='text' name='Nome' value=''>
-            <h5>stranze tot Della Struttura</h5>
-            <input type='int' name='Stanze' value=''>
-            <h5>Bagni tot Della Struttura</h5>
-            <input type='int' name='Bagni' value=''>
-            <h5>Prezzo di una notte della Struttura</h5>
-            <input type='int' name='PrezzoStruttura' value=''>
-            <h5>Informazioni generali della struttura</h5>
-            <textarea class="form-control" name='info' placeholder="Scrivi qua le info" id="floatingTextarea2" style="height: 100px"></textarea>
-            <h5>Immagnine principale della Struttura</h5>
-            <input type="text" name='imgPrincipale' class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-            <br><br>
-            <input class='' type='submit' value='Affitta'>
-            <a href='../index.php' class='btn btn-outline-secondary' tabindex='-1' role='button' aria-disabled='true'>esci</a>
-    </form>
+    <nav class="navbar sfondo">
+            <a href="../index.php"><h1 class= "testonav">BnB Italia</h1></a>
+            <div style="float: right;margin-right: 10px;">
+    </nav>
+<h1 class= "testonav">benevuti nella registrazione della propia struttura</h1>
+<div class="nav testonav">
+<div class="container text-center">
 
+    <form action="Registrazione_struttura.php" method="post" enctype="multipart/form-data">
+
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                <h5>Dove è:</h5>
+                <select name ="Locazione" class="form-select" required id="inputGroupSelect01">
+                    <option>Toscana</option>
+                    <option>Lazio</option>
+                    <option>Sicilia</option>
+                    <option>Abruzzo</option>
+                    <option>Lombardia</option>
+                    <option>Campania</option>
+                    <option>Friuli</option>
+                    <option>Veneto</option>
+                    <option>Calabria</option>
+                    <option>Puglia</option>
+                    <option>Liguria</option>
+                    <option>Marche</option>
+                    <option>Emilia-Romangna</option>
+                </select>
+            </div>
+            <div class="col">
+                <h5>Nome Struttura</h5>
+                <div class="input-group mb-3">
+                    <input type="text" name="Nome" required class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+            </div>
+            <div class="col">
+                <h5>N.tot stanze</h5>
+                <input type="int" name="Stanze" required class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+
+        </div>
+    </div>
+
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <h5>N. tot bagni</h5>
+                    <input type="int" name="Bagni" required class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="col">
+                    <h5>Prezzo a notte</h5>
+                    <input type="int" name="PrezzoStruttura" required class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="col">
+                    <h5>Info della struttura</h5>
+                    <textarea class="form-control" required name='info' placeholder="Scrivi qua le info" id="floatingTextarea2" style="height: 100px"></textarea>
+                </div>
+            </div>
+            <h5>Immagnine principale della Struttura</h5>
+                <input type="text" name='imgPrincipale' required class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                <br>
+                <input class="btn button_neo"  style="color:white;" type='submit' value='Affitta'>
+                <a href='../index.php' class="btn button_neo"  style="color:white;" tabindex='-1' role='button' aria-disabled='true'>esci</a>
+                <br><br>
+        </div>
+    </form>
+</div>
+</div>
 </body>
 </html>

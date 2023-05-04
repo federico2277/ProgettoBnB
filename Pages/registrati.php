@@ -21,21 +21,22 @@
                 <a href="../index.php"><h1 class= "testonav">BnB Italia</h1></a>
                 <div style="float: right;margin-right: 10px;">
     </nav>
-
-<h1 class="Titolo"> Inserimento nuovo Utente </h1>
+    <div class="nav" >
+        <div class="container text-center">
+<h1 class="testonav"> Inserimento nuovo Utente </h1>
 <form action="Registrazione_Utente.php" method="post">
     <div class="container text-center">
         <div class="row">
             <div class="col">
-            <label  class="col-sm-2 col-form-label">Nome</label>
+            <label  class="col-sm-2 col-form-label testonav">Nome</label>
                 <input name="Nome"  required type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
             </div>
             <div class="col">
-            <label  class="col-sm-2 col-form-label">Cognome</label>
+            <label  class="col-sm-2 col-form-label testonav">Cognome</label>
             <input name="Cognome"  required type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
             </div>
             <div class="col">
-            <label  class="col-sm-2 col-form-label">Datadinascita</label>
+            <label  class="col-sm-2 col-form-label testonav">Datadinascita</label>
                 <input name="Data_di_nascita"  required type="date" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
             </div>
         </div>
@@ -44,19 +45,19 @@
     <div class="container text-center">
         <div class="row">
             <div class="col">
-                <label  class="col-sm-2 col-form-label">Telefono</label>
+                <label  class="col-sm-2 col-form-label testonav">Telefono</label>
                 <input name="Telefono" type="int" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
             </div>
             <div class="col">
-                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                <label for="inputPassword" class="col-sm-2 col-form-label testonav">Password</label>
                 <input type="password"  required name="Pass" class="form-control" id="inputPassword">
             </div>
             <div class="col">
-                <label  class="col-sm-2 col-form-label">CodiceFiscale</label>
+                <label  class="col-sm-2 col-form-label testonav">CodiceFiscale</label>
                 <input name="CodiceFiscale" maxlength="16" required type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
             </div>
             <div class="col">
-            <label for="exampleFormControlInput1" class="col-sm-2 col-form-label">Email</label>
+            <label for="exampleFormControlInput1" class="col-sm-2 col-form-label testonav">Email</label>
             <input type="email" class="form-control"  required name="Email" id="exampleFormControlInput1" placeholder="name@example.com">
             </div>
         </div>
@@ -66,13 +67,15 @@
     <div class="container text-center">
         <div class="row">
             <div class="col">
-                <input type="submit"class="btn btn-outline-succes" value="invia i dati">
+                <input type="submit"class="btn btn-outline-light testonav" value="invia i dati">
             </div>
         </div>
     </div>
 </form>
 <br><br>
-<hr>
+<div/>
+    <div/>
+
 
 </body>
 </html>

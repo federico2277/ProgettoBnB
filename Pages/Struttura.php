@@ -93,7 +93,7 @@
                 echo "<h4 class='testonav'> Animali :</h4> ";
                 echo  $_SESSION['Animali'] ;
         echo "</center></div>";
-        echo " <center><a href='Pagamento.php' class='btn btn-outline-secondary bottoneNath' tabindex='-1' role='button' aria-disabled='true' >Procedi</a></center>";
+        echo " <center><a href='Pagamento.php' class='btn button_neo bottoneNath'  style='color:white;'' tabindex='-1' role='button' aria-disabled='true' >Procedi</a></center>";
         echo " </div></div>";
 
     ?>

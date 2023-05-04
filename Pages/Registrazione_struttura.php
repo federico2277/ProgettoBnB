@@ -16,32 +16,40 @@
     <script src="../Script/MyScript.js"></script>
 </head>
 <body style="background-color: #333;">
-    <?php
-    
-include "../Componets/Connessione.php";
+<nav class="navbar sfondo">
+                <a href="../index.php"><h1 class= "testonav">BnB Italia</h1></a>
+                <div style="float: right;margin-right: 10px;">
+    </nav>
+    <div class="nav">
+        <div class="container text-center">
+            <?php
+            
+        include "../Componets/Connessione.php";
 
-$Nome = $_POST['Nome'];
-$Locazione = $_POST['Locazione'];
-$Stanze = $_POST['Stanze'];
-$Bagni = $_POST['Bagni'];
-$PrezzoStruttura = $_POST['PrezzoStruttura'];
-$imgPrincipale = $_POST['imgPrincipale'];
-$info = $_POST['info'];
-$info = str_replace("'", "#", $info);
-echo $info;
+        $Nome = $_POST['Nome'];
+        $Locazione = $_POST['Locazione'];
+        $Stanze = $_POST['Stanze'];
+        $Bagni = $_POST['Bagni'];
+        $PrezzoStruttura = $_POST['PrezzoStruttura'];
+        $imgPrincipale = $_POST['imgPrincipale'];
+        $info = $_POST['info'];
+        $info = str_replace("'", "#", $info);
+        echo $info;
 
-$query ="INSERT INTO struttura 
-(Nome,Locazione,Stanze,Bagni,PrezzoStruttura,imgPrincipale,info)
-VALUES ('".$Nome."', '".$Locazione."','".$Stanze."', '".$Bagni."', '".$PrezzoStruttura."', '".$imgPrincipale."', '".$info."');";
+        $query ="INSERT INTO struttura 
+        (Nome,Locazione,Stanze,Bagni,PrezzoStruttura,imgPrincipale,info)
+        VALUES ('".$Nome."', '".$Locazione."','".$Stanze."', '".$Bagni."', '".$PrezzoStruttura."', '".$imgPrincipale."', '".$info."');";
 
-$result = mysqli_query ($connessione, $query) or
-die ("Query fallita " . mysqli_error($connessione) . " " . mysqli_errno($connessione));
+        $result = mysqli_query ($connessione, $query) or
+        die ("Query fallita " . mysqli_error($connessione) . " " . mysqli_errno($connessione));
 
-echo "<h1>Registrazione Struttura andata a buon fine</h1>";
+        echo "<h1 class='testonav'>Registrazione Struttura andata a buon fine</h1>";
+        echo "<img src='../image/Spunta.jpg' width='200' height='200' style='border-radius:65px'> <br><br>";
+        echo "<a href='../index.php' class='btn button_neo'  style='color:white;' tabindex='-1' role='button' aria-disabled='true'>esci</a>";
 
-echo "<a href='../index.php' class='btn btn-outline-secondary' tabindex='-1' role='button' aria-disabled='true'>esci</a>";
-
-?>
+        ?>
+    </div>
+</div>
 
 </body>
 </html>

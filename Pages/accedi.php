@@ -23,7 +23,8 @@ session_start();
                 <a href="../index.php"><h1 class= "testonav">BnB Italia</h1></a>
                 <div style="float: right;margin-right: 10px;">
     </nav>
-
+    <div class="row">
+            <div class="col">
     <h1 class="testonav">accedi</h1>
 <form action="log-in.php" method="post">
     <div class="nav" >
@@ -52,11 +53,12 @@ session_start();
                     <input type="submit" class="btn button_neo"  style="color:white;"   value="invia i dati">
                     <a href='../index.php'  class="btn button_neo"  style="color:white;" tabindex='-1' role='button' aria-disabled='true'>esci</a>
                 </div>
-                <br><br>
+                <br><br><br><br>
             </div>
         </div>
     </div>
-
+</div>
+</div>
 </form>
 </body>
 </html>
