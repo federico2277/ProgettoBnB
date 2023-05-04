@@ -26,6 +26,7 @@
     <div class="nav">
         <div class="container text-center">
     <?php    
+    session_start();
         include "../Componets/Connessione.php";
         $CodiceFiscale=$_POST['CodiceFiscale'];
         $Nome=$_POST['Nome'];
@@ -52,11 +53,9 @@
         (Cod_Fiscale, Nome, Cognome, Data_nascita, Email, Telefono ,Pass)
         VALUES ('". $CodiceFiscale ."',' ".$Nome."', '".$Cognome."',' ".$Data_di_nascita."',' ".$Email."', '".$Telefono."', '".$Pass."');";
 
-
         $result = mysqli_query ($connessione, $query) or
         die ("Query fallita " . mysqli_error($connessione) . " " . mysqli_errno($connessione));
 
-        session_start();
         $_SESSION['CodiceFiscale'] = $CodiceFiscale;
         $_SESSION['Nome'] = $Nome;
         $_SESSION['Cognome'] = $Cognome;
@@ -77,15 +76,16 @@
             if($_SESSION['controlloIndex'] == 0){
                 echo "<h1>Registrazione non effetuata Utente gia esistente</h1>";
                 echo "<img src='../image/X.jpg' width='200' height='200' style='border-radius:65px'> <br><br>";
-                echo "<a href='registrati.php' class='btn btn-outline-secondary' tabindex='-1' role='button' aria-disabled='true'>riprova</a>";
-                echo "<a href='../index.php' class='btn btn-outline-secondary' tabindex='-1' role='button' aria-disabled='true'>esci</a>";
+                echo "<a href='registrati.php' class='btn button_neo'  style='color:white;' tabindex='-1' role='button' aria-disabled='true'>riprova</a>";
+                echo "<a href='../index.php'class='btn button_neo'  style='color:white;' tabindex='-1' role='button' aria-disabled='true'>esci</a>";
             }else{
                 echo "<h1>Registrazione non effetuata Utente gia esistente</h1>";
                 echo "<img src='../image/X.jpg' width='200' height='200' style='border-radius:65px'> <br><br>";
-                echo "<a href='registrati.php' class='btn btn-outline-secondary' tabindex='-1' role='button' aria-disabled='true'>riprova</a>";
-                echo "<a href='Pagamento.php' class='btn btn-outline-secondary' tabindex='-1' role='button' aria-disabled='true'>esci</a>";
+                echo "<a href='registrati.php' class='btn button_neo'  style='color:white;' tabindex='-1' role='button' aria-disabled='true'>riprova</a>";
+                echo "<a href='Pagamento.php' class='btn button_neo'  style='color:white;' tabindex='-1' role='button' aria-disabled='true'>esci</a>";
             }
         }
         ?>
+
 </body>
 </html>

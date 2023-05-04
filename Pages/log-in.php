@@ -53,7 +53,7 @@
                     $_SESSION['Data_di_nascita']  = $row['Data_nascita'];
                     $_SESSION['Telefono'] = $row['Telefono'];
                 }
-                if($_SESSION['controlloIndex'] == 0){
+                if($_SESSION['controlloIndex'] == true){
                     $_SESSION['accesso']=true;
                     echo "<h1 class='testonav'>Accesso Effetuato</h1> <br>";
                     echo "<img src='../image/pollice_SU.jpg' width='200' height='200' style='border-radius:65px'> <br><br>";
@@ -66,7 +66,7 @@
                     echo "<a href='Pagamento.php' class='btn button_neo'  style='color:white; tabindex='-1' role='button' aria-disabled='true'>esci</a>";
                 }
             }else{
-                if($_SESSION['controlloIndex'] == 0){
+                if($_SESSION['controlloIndex'] == true){
                     $_SESSION['accesso']=false;
                     echo "<h1 class='testonav'>Non esiste questo utente</h1> <br>";
                     echo "<img src='../image/pollice_GIU.jpg' width='200' height='200' style='border-radius:65px'> <br><br>";

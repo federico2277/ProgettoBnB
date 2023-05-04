@@ -6,9 +6,8 @@
     if (isset($_SESSION['accesso'])) {
         $_SESSION['accesso']= true;
     }else{
-        $_SESSION['accesso']= false;
+        $_SESSION['accesso']= false;        
     }
-
     $_SESSION['controlloIndex'] = 0;
     ?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,9 +27,8 @@
 </head>
 <body style="background-color: #333;">
 <?php
-    $_SESSION['controlloIndex'] = 0;
-    echo $_SESSION['controlloIndex'];
-    ?>
+echo $_SESSION['controlloIndex'];
+?>
 <nav class="navbar sfondo">
             <h1 class= "testonav">BnB Italia</h1>
             <div style="float: right;margin-right: 10px;">
