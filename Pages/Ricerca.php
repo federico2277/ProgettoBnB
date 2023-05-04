@@ -122,12 +122,12 @@
             echo $row['imgPrincipale'];
             echo "' class='imgcard' alt='...'>
             <div class='card-body cardbodynath' >
-                <h5 class='neonBianco' style='texte-align:center;'>Hotel</h5>
+                <h5 class='neonBianco' style='text-align:center;font-size:40px;'>Hotel</h5>
                 <p class='testonav'><b>";
                 echo $PrezzoStruttura; 
-                echo "€</b> a notte  .<> in totale costa: ";
+                echo "€</b> a notte  .</p><p class='neonBianco' style='text-align:center;'><b>";
                 echo $prezzoTotale; 
-                echo"</p>
+                echo"$ </b> in totale costa:</p>
                 <center>
                 <form action='Struttura.php' method='post'>
                 <input type='hidden' name='idStruttura' value='$idStruttura'>
