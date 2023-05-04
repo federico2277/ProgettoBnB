@@ -34,7 +34,7 @@
         $imgPrincipale = $_POST['imgPrincipale'];
         $info = $_POST['info'];
         $info = str_replace("'", "#", $info);
-        echo $info;
+
 
         $query ="INSERT INTO struttura 
         (Nome,Locazione,Stanze,Bagni,PrezzoStruttura,imgPrincipale,info)
