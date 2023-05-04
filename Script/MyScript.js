@@ -6,8 +6,7 @@ function bgDove() {
     document.getElementById("Checkout").style.backgroundColor = "#333";//div check-out
     document.getElementById("dovein").style.backgroundColor = "lightgray";//input dove
     document.getElementById("dove").style.backgroundColor = "lightgray"; //div ricerca
-    document.getElementById("dovein").style.color="white";
-    document.getElementById("dovein").style.textShadow= "0 0 4px #0af, 0 0 8px #0af, 0 0 12px #0af, 0 0 16px #0af";    
+ 
 }
 function bgCheckin() {    
     document.getElementById("divO").style.backgroundColor="#333";
@@ -35,7 +34,6 @@ function NascondiOspiti(){
     document.getElementById("Checkout").style.backgroundColor = "#333";//div check-out
     document.getElementById("divO").style.backgroundColor="lightgray";
     document.getElementById("ospiti").style.display= "block";
-    document.getElementById("valO").style.textShadow= "rgb(0, 170, 255) 0px 0px 4px, rgb(0, 170, 255) 0px 0px 8px, rgb(0, 170, 255) 0px 0px 12px, rgb(0, 170, 255) 0px 0px 16px";
 }
 
 function inserimento(x){

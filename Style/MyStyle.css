@@ -4,8 +4,9 @@ footer {
     text-shadow: rgb(0, 170, 255) 0px 0px 4px, rgb(0, 170, 255) 0px 0px 8px, rgb(0, 170, 255) 0px 0px 12px, rgb(0, 170, 255) 0px 0px 16px;
     background-color: black;
     text-align: center;
+    position: relative;
     width: 100%;
-    position: fixed;
+    height: 150px;
     bottom: 0px;
     padding: 10px;
 }
@@ -23,7 +24,7 @@ main {
     text-shadow: rgb(0, 170, 255) 0px 0px 4px, rgb(0, 170, 255) 0px 0px 8px, rgb(0, 170, 255) 0px 0px 12px, rgb(0, 170, 255) 0px 0px 16px;
     border-radius: 25px;
     box-shadow: rgb(255, 255, 255) 0px 0px 5px, rgb(255, 255, 255) 0px 0px 10px, rgb(255, 255, 255) 0px 0px 15px, rgb(0, 170, 255) 0px 0px 20px, rgb(0, 170, 255) 0px 0px 30px, rgb(0, 170, 255) 0px 0px 40px, rgb(0, 170, 255) 0px 0px 55px;
-    background-color: rgb(51, 51, 51);
+    background-color: black;
 }
 section {
     margin-bottom: 40px;
@@ -39,7 +40,7 @@ section {
     letter-spacing: 4px;
     text-align: center;
 }
-.nav {
+.nav{
     box-shadow: rgb(255, 255, 255) 0px 0px 5px, rgb(255, 255, 255) 0px 0px 10px, rgb(255, 255, 255) 0px 0px 15px, rgb(0, 170, 255) 0px 0px 20px, rgb(0, 170, 255) 0px 0px 30px, rgb(0, 170, 255) 0px 0px 40px, rgb(0, 170, 255) 0px 0px 55px;
     background-color: rgb(51, 51, 51);
     margin-top: 5%;
@@ -57,8 +58,8 @@ section {
     width: 60%;
     text-align: center;
     border-radius: 25px;
-    text-shadow: rgb(0, 170, 255) 0px 0px 4px, rgb(0, 170, 255) 0px 0px 8px, rgb(0, 170, 255) 0px 0px 12px, rgb(0, 170, 255) 0px 0px 16px;
     color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff80b3, 0 0 70px #ff80b3, 0 0 80px #ff80b3, 0 0 100px #ff80b3, 0 0 150px #ff80b3;
     background-color: #333;
 }
 .divsinistro {
@@ -74,11 +75,13 @@ section {
     margin-left: 10%;
     background-color: rgb(51, 51, 51);
     display: none;
-    color: rgb(255, 255, 255);
     box-shadow: rgb(255, 255, 255) 0px 0px 5px, rgb(255, 255, 255) 0px 0px 10px, rgb(255, 255, 255) 0px 0px 15px, rgb(0, 170, 255) 0px 0px 20px, rgb(0, 170, 255) 0px 0px 30px, rgb(0, 170, 255) 0px 0px 40px, rgb(0, 170, 255) 0px 0px 55px;
     border: 2px solid white;
-    text-shadow: rgb(0, 170, 255) 0px 0px 4px, rgb(0, 170, 255) 0px 0px 8px, rgb(0, 170, 255) 0px 0px 12px, rgb(0, 170, 255) 0px 0px 16px;
     border-radius: 25px;
+}
+.nRegione{
+    color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff80b3, 0 0 70px #ff80b3, 0 0 80px #ff80b3, 0 0 100px #ff80b3, 0 0 150px #ff80b3;
 }
 .ospiti {
     display: none;
@@ -110,8 +113,9 @@ section {
 }
 .inputnav {
     text-align: center;
-    text-shadow: rgb(0, 170, 255) 0px 0px 4px, rgb(0, 170, 255) 0px 0px 8px, rgb(0, 170, 255) 0px 0px 12px, rgb(0, 170, 255) 0px 0px 16px;
     width: 80%;
+    color:white;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff80b3, 0 0 70px #ff80b3, 0 0 80px #ff80b3, 0 0 100px #ff80b3, 0 0 150px #ff80b3;
     box-shadow: rgb(255, 255, 255) 0px 0px 5px, rgb(255, 255, 255) 0px 0px 10px, rgb(255, 255, 255) 0px 0px 15px, rgb(0, 170, 255) 0px 0px 20px, rgb(0, 170, 255) 0px 0px 30px, rgb(0, 170, 255) 0px 0px 40px, rgb(0, 170, 255) 0px 0px 55px;
     border: 2px solid white;
     background-color: #333;
@@ -161,11 +165,11 @@ section {
 }   
 .icon {
     display: inline-flex;
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    outline: 2px solid #fff; transition-property:
-    outline-offset, outline-color, background-color;
+    outline: 2px solid #fff;
+    transition-property:outline-offset, outline-color, background-color;
     transition-duration: 0.25s;
 }
 .icon:hover {
@@ -205,6 +209,7 @@ animation: shake 0.25s;
 }
 .imagineispira{
     border-radius: 25px;
+    
 }
 .testoinfo{
     color: white;
@@ -283,3 +288,15 @@ animation: shake 0.25s;
 .natinput{
     width: 50%;
 }
+.neonBianco{
+        color: #fff;
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff80b3, 0 0 70px #ff80b3, 0 0 80px #ff80b3, 0 0 100px #ff80b3, 0 0 150px #ff80b3;
+}
+
+.imgNath{
+    width: 70%;
+    border-image: initial;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+      

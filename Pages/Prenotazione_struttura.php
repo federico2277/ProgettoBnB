@@ -16,6 +16,19 @@
     <script src="../Script/MyScript.js"></script> </head>
 
 <body style="background-color: #333;">
+<nav class="navbar sfondo">
+                <a href="../index.php"><h1 class= "testonav">BnB Italia</h1></a>
+                <div style="float: right;margin-right: 10px;">
+                <a href="registrati.php"> 
+                <button  class="btn button_neo btn-outline-secondary" style="color:white;margin-left:20px;" tabindex="-1" role="button" aria-disabled="true">Registrati</button>
+                </a>
+                <a href="accedi.php">
+                <button  class="btn button_neo btn-outline-secondary" style="color:white;margin-left:20px;" tabindex="-1" role="button" aria-disabled="true">Accedi</button>
+                </a>
+                <a href="Affitta.php">
+                <button  class="btn button_neo btn-outline-secondary" style="color:white;margin-left:20px;" tabindex="-1" role="button" aria-disabled="true" >Affitta</button>
+                </a>
+    </nav>
 <?php
     session_start();
     include "../Componets/Connessione.php";
@@ -52,8 +65,20 @@
     die ("Query fallita " . mysqli_error($connessione) . " " . mysqli_errno($connessione));
 
 ?>
-
-<h1>Hai prenotato La struttura Con successo il codice della prenotazione</h1>
-<a href='../index.php' class='btn btn-outline-succes' tabindex='-1' role='button' aria-disabled='true'>Ritorna nell Index</a>
+<main>
+    <section>
+    <div class="cardnath">
+    <h1 class="neonBianco" style="text-align: center;">Hai prenotato La struttura Con successo </h1>
+    <h1 class="testonav" style="margin-top: 5%;">Da parte nostra goditi le tue vacanze</h1>
+    <center><img src="../image/Prenotazione.gif" alt="prenotazione" class="imgNath">
+    </center>
+    <center>
+    <a href='../index.php'> 
+        <button  class="btn bottoneNath btn-outline-secondary button_neo" style="color:white;margin-top:5%;" tabindex="-1" role="button" aria-disabled="true">Vai al Home</button>
+    </a>
+    </center>
+</div>
+    </section>
+</main>
 </body>
 </html>

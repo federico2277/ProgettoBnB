@@ -5,9 +5,10 @@
     session_start();
     if (isset($_SESSION['accesso'])) {
         $_SESSION['accesso']= true;
-    }else{
-        $_SESSION['accesso']= false;        
+    }else  if (!isset($_SESSION['accesso'])){
+        $_SESSION['accesso']= false;
     }
+
     $_SESSION['controlloIndex'] = 0;
     ?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,15 +27,18 @@
     
 </head>
 <body style="background-color: #333;">
-<?php
-echo $_SESSION['controlloIndex'];
-?>
 <nav class="navbar sfondo">
             <h1 class= "testonav">BnB Italia</h1>
             <div style="float: right;margin-right: 10px;">
-            <a href="./Pages/registrati.php" class="btn button_neo" style="color:white;" tabindex="-1" role="button" aria-disabled="true">Registrati</a>
-            <a href="./Pages/accedi.php" class=" btn button_neo" tabindex="-1" role="button" aria-disabled="true" style="color:white;">Accedi</a>
-            <a href="./Pages/Affitta.php" class="btn button_neo"  style="color:white;" tabindex="-1" role="button" aria-disabled="true" >Affitta</a>
+            <a href="./Pages/registrati.php"> 
+            <button  class="btn button_neo btn-outline-secondary" style="color:white;margin-left:20px;" tabindex="-1" role="button" aria-disabled="true">Registrati</button>
+            </a>
+            <a href="./Pages/accedi.php">
+            <button  class="btn button_neo btn-outline-secondary" style="color:white;margin-left:20px;" tabindex="-1" role="button" aria-disabled="true">Accedi</button>
+            </a>
+            <a href="./Pages/Affitta.php">
+            <button  class="btn button_neo btn-outline-secondary" style="color:white;margin-left:20px;" tabindex="-1" role="button" aria-disabled="true" >Affitta</button>
+            </a>
 </nav>
 
 <form action="Pages/Ricerca.php" method="post">
@@ -42,7 +46,7 @@ echo $_SESSION['controlloIndex'];
             <div class="Dricerca" onclick="bgDove()" id="dove" >
                 <center>
                     <h5 class="testonav">Dove vuoi risiedere?</h5>
-                    <input required class="inputnav" type="text" name="Dove" style="border:lightgray;margin-top:5%;color: lightgray;" id="dovein" value="cerca dove allogiare">
+                    <input required class="inputnav" type="text" name="Dove" style="margin-top:5%;" id="dovein" value="Cerca dove allogiare">
                 </center>
             </div>
             <div class="Dricerca" onclick="bgCheckin()" id="checkin">
@@ -61,10 +65,10 @@ echo $_SESSION['controlloIndex'];
             <div class="divsinistro">
                 <h5 class="testonav">Ospiti</h5>
                 <br>
-                <p id="valO" class="testonav" style="color: #fff; padding-bottom:2%;margin-left:6%;">1 Ospite Adulto</p>
+                <p id="valO" class="neonBianco" style="color: #fff; padding-bottom:2%;margin-left:6%;">1 Ospite Adulto</p>
             </div>
             <div class="divdestro">
-                <input required type="submit" value="cerca"  class="btn button_neo" style="float: right;margin: 15%; color:white;">
+                <input required type="submit" value="cerca"  class="btn button_neo btn-outline-secondary" style="float: right;margin: 15%; color:white;">
             </div>
             </div>
         </div>
@@ -182,10 +186,10 @@ echo $_SESSION['controlloIndex'];
     <br>
     <main style="padding-top: 100px;">
         <section>
-            <h1 class="testonav" >Spunti per l'estetica</h1>
+            <h1 class="neonBianco" style="text-align: center;font-size: 50px;">Spunti per l'estetica</h1>
             <div style="width: 100%;;height:700px;">
                 <div class="imagine1"> 
-                    <img src="./image/ideeProgetto2.jpg" alt="" style="width: 100%;padding-right:5%;height:700px;"  class="imagineispira">
+                    <img src="./image/ideeProgetto2.jpg" alt="" style="width:100%;padding-right:5%;height:700px;"  class="imagineispira">
                 </div>
                 <div class="imagine2">
                     <img src="./image/ideeProgetto1.jpg" alt=""style="width: 100%;height:100%;margin-bottom:5%; "class="imagineispira">
@@ -203,9 +207,26 @@ echo $_SESSION['controlloIndex'];
             </p>
             </div>
             <div class="divisione"></div>
+            <h1 class="neonBianco" style="text-align: center;font-size: 50px;">Ideatori sito</h1>
+            <div style="width: 100%;margin-top:50px;margin-bottom:100px;">
+                <div class="divsinistro">
+                    <center>
+                    <img src="./image/Nath.jpg" alt="Nathan" class="icon">
+                    <h1 class="neonBianco">Nath</h1>
+                    <h5 class="testonav">Giacomo Vasquez</h5>
+                    </center>
+                </div>
+                <div class="divdestro">
+                    <center>
+                    <img src="./image/Fede.jpg" alt="Fede" class="icon">
+                    <h1 class="neonBianco">Borro</h1>
+                    <h5 class="testonav">Federico Borrometi</h5>
+                    </center>
+                </div>
+            </div>
+
         </section>
     </main>
-    
 
 </body>
 </html>

@@ -13,41 +13,74 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <script src="../Script/MyScript.js"></script> </head>
+    <script src="../Script/MyScript.js"></script> 
+<?php
+        session_start()
+?>
+</head>
 <body style="background-color: #333;">
     <nav class="navbar sfondo">
                 <a href="../index.php"><h1 class= "testonav">BnB Italia</h1></a>
                 <div style="float: right;margin-right: 10px;">
-                <a href="registrati.php" class="btn btn-primary" tabindex="-1" role="button" aria-disabled="true">Registrati</a>
-                <a href="accedi.php" class="btn  btn btn-outline-primarybtn btn-outline-primary" tabindex="-1" role="button" aria-disabled="true" >Accedi</a>
+                <a href="registrati.php"> 
+                <button  class="btn button_neo btn-outline-secondary" style="color:white;margin-left:20px;" tabindex="-1" role="button" aria-disabled="true">Registrati</button>
+                </a>
+                <a href="accedi.php">
+                <button  class="btn button_neo btn-outline-secondary" style="color:white;margin-left:20px;" tabindex="-1" role="button" aria-disabled="true">Accedi</button>
+                </a>
+                <a href="Affitta.php">
+                <button  class="btn button_neo btn-outline-secondary" style="color:white;margin-left:20px;" tabindex="-1" role="button" aria-disabled="true" >Affitta</button>
+                </a>
     </nav>
-<h1>conferma e paga</h1>
+    <main>
+        <section>
+        <h1 class="testonav">Conferma dei dati e pagamento</h1>
+        <div class="cardnath">
+        <h1 style="text-align: center;font-size: 50px;" class="neonBianco">Il tuo viaggio</h1>
+        <div class="divinfoSS">
+            <center>
+            <h1 class="neonBianco"><?php echo $_SESSION['nomeStrut'];?></h1>
+            <img src="<?php echo $_SESSION['img']; ?>" class="Struturaimg" alt="...">
+            </center>
+        </div>
+        <div class="divinfostruts">
+        <div style='width: 100%;'>
 
-    <h2>il tuo viaggio</h2>
+        <div class='divinfo'>
+            <h4 style="text-align: center;" class="neonBianco">Informazioni vacanza</h4>
+            <h4> Informazioni sulle  <span class='testonav'>date</span> della vacanza.</h4> 
+        </div> 
+        <?php 
+            $_SESSION['controlloIndex'] = 1;
+            echo "<center><div class='divinfoCi' ><div style='margin:5%;'><h5 class='testonav' style='margin-top:10px'>Check-in:</h5><h3 style='color:white'>";
+            echo  $_SESSION['Check-in'];
+            echo "</h3></div> </div>";
+            echo "<div class='divinfoCO'>  <div style='margin:5%;'><h5 class='testonav'>Check-out:</h5><h3 style='color:white'>";
+            echo  $_SESSION['Check-out'] ;  
+            echo "</h3></div> </div></center>" ;  
+        ?>
+        <br>
+        <div class='divinfo' >
+        <h4 style="text-align: center;" class="neonBianco">Costo</h4>
 
-    <h3>date</h3>
-<?php 
-    session_start();
-        $_SESSION['controlloIndex'] = 1;
-        echo $_SESSION['controlloIndex'] ;
-    echo "<h5>";
-    echo $_SESSION['Check-in'];  
-    echo "    ";
-    echo $_SESSION['Check-out'];
-    echo "</h5>";
-?>
-<h2>Costo totale</h2>
-<?php 
-    echo "<h5>";
+        <?php 
+
+    echo "<h4><span class='testonav'>";
     echo $_SESSION['prezzoTotale'];
-    echo "</h5>";
-    if ($_SESSION['accesso']==true) {    
-        echo "<a href='Prenotazione_Struttura.php' class='btn btn-danger' tabindex='-1' role='button' aria-disabled='true'>Prenota</a>";
-        echo "dentro";
-    }else if ($_SESSION['accesso']==false) {
-        echo "<a href='Prenotazione_Struttura.php' class='btn btn-danger' disabled tabindex='-1' role='button' aria-disabled='true'>Prenota</a>";
-        echo "fuori";
-    }
-?>
+    echo "$ </span>Prezzo struttura.</h4> </div> ";
+        if ($_SESSION['accesso']==true) {   
+            echo "<center>"; 
+            echo "<a href='Prenotazione_Struttura.php' class='btn bottoneNath btn-outline-secondary button_neo' style='color:white;' tabindex='-1' role='button' aria-disabled='true'>Vai al pagamento</a>";
+            echo "</center>"; 
+        }else if ($_SESSION['accesso']==false) {
+            echo "<center>"; 
+            echo "<a href='Prenotazione_Struttura.php' class='btn bottoneNath btn-outline-secondary button_neo' style='color:white;' disabled tabindex='-1' role='button' aria-disabled='true'>Vai al pagamento</a>";
+            echo "</center>"; 
+        }
+        ?>      </div>
+            </div>
+        </div>
+        </section>
+    </main>
 </body>
 </html>

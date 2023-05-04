@@ -35,7 +35,8 @@
     while ($row = mysqli_fetch_assoc ($result)) //solo associativo
     {
         $nome = $row['nome'];
-        echo "<h1 class='testonav'>";
+        $_SESSION['nomeStrut']= $nome;
+        echo "<h1 class='neonBianco' style='text-align:center;'>";
         echo $nome ;
         echo "</h1>";
         $Stanze = $row['Stanze'];
@@ -43,6 +44,7 @@
         $Bagni = $row['Bagni'];
         $imgPrincipale = $row['imgPrincipale'];
         $info = $row['info'];
+        $_SESSION['img']= $imgPrincipale;
 
     }
     $differenza = strtotime($_SESSION['Check-out']) - strtotime($_SESSION['Check-in']);
@@ -55,7 +57,7 @@
         <div class="divisione" style="margin-top:100px;"></div>
     <?php 
         echo "<div style='width: 100%;'>";
-    echo" <div class='divinfoSS'><h1 class='testonav'>Informazione struttura</h1>
+    echo" <div class='divinfoSS'><h1 class='neonBianco'>Informazione struttura</h1>
     <h2 style='color:white;'>". $info ."</h2>";
     echo "  <div style='width:100%;height:120px'>
     <div class='divsinistroicona' ><img src='../image/bagno.png' alt='bagno' style='width: 100px;'></div>
@@ -93,7 +95,7 @@
                 echo "<h4 class='testonav'> Animali :</h4> ";
                 echo  $_SESSION['Animali'] ;
         echo "</center></div>";
-        echo " <center><a href='Pagamento.php' class='btn button_neo bottoneNath'  style='color:white;'' tabindex='-1' role='button' aria-disabled='true' >Procedi</a></center>";
+        echo " <center><a href='Pagamento.php' class='btn bottoneNath btn-outline-secondary button_neo' style='color:white;' tabindex='-1' role='button' aria-disabled='true' >Prenota</a></center>";
         echo " </div></div>";
 
     ?>
