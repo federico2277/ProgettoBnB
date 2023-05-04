@@ -68,6 +68,7 @@
     echo "<h4><span class='testonav'>";
     echo $_SESSION['prezzoTotale'];
     echo "$ </span>Prezzo struttura.</h4> </div> ";
+    echo $_SESSION['accesso'];
         if ($_SESSION['accesso']==true) {   
             echo "<center>"; 
             echo "<a href='Prenotazione_Struttura.php' class='btn bottoneNath btn-outline-secondary button_neo' style='color:white;' tabindex='-1' role='button' aria-disabled='true'>Vai al pagamento</a>";

@@ -8,7 +8,6 @@
     }else  if (!isset($_SESSION['accesso'])){
         $_SESSION['accesso']= false;
     }
-
     $_SESSION['controlloIndex'] = 0;
     ?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
