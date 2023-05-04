@@ -5,11 +5,12 @@
     session_start();
     if (isset($_SESSION['accesso'])) {
         $_SESSION['accesso']= true;
-    }else  if (!isset($_SESSION['accesso'])){
+    }else {
         $_SESSION['accesso']= false;
     }
     $_SESSION['controlloIndex'] = 0;
     ?>
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style/MyStyle.css" >
@@ -213,6 +214,7 @@
                     <img src="./image/Nath.jpg" alt="Nathan" class="icon">
                     <h1 class="neonBianco">Nath</h1>
                     <h5 class="testonav">Giacomo Vasquez</h5>
+                    <p class="testoinfo">Parte presso che Front-end</p>
                     </center>
                 </div>
                 <div class="divdestro">
@@ -220,6 +222,7 @@
                     <img src="./image/Fede.jpg" alt="Fede" class="icon">
                     <h1 class="neonBianco">Borro</h1>
                     <h5 class="testonav">Federico Borrometi</h5>
+                    <p class="testoinfo">Parte presso che Back-end</p>
                     </center>
                 </div>
             </div>
