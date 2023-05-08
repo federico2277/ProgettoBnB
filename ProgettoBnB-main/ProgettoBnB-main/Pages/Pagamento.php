@@ -64,11 +64,10 @@
         <h4 style="text-align: center;" class="neonBianco">Costo</h4>
 
         <?php 
-
-    echo "<h4><span class='testonav'>";
-    echo $_SESSION['prezzoTotale'];
-    echo "$ </span>Prezzo struttura.</h4> </div> ";
-    ?>
+            echo "<h4><span class='testonav'>";
+            echo $_SESSION['prezzoTotale'];
+            echo "$ </span>Prezzo struttura.</h4> </div> ";
+        ?>
         <center>
         <a href='Prenotazione_Struttura.php' class='btn bottoneNath btn-outline-secondary button_neo' style='color:white;' disabled tabindex='-1' role='button' aria-disabled='true'>Vai al pagamento</a>
         </center>

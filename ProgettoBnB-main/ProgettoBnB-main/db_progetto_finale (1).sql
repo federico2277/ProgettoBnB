@@ -27,10 +27,6 @@ SET time_zone = "+00:00";
 -- Struttura della tabella `affituario`
 --
 
-create database db_progetto_finale;
-use db_progetto_finale;
-
-
 CREATE TABLE `affituario` (
   `Cod_Fiscale` varchar(16) NOT NULL,
   `Nome` varchar(45) DEFAULT NULL,
