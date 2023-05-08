@@ -14,77 +14,75 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="../Script/MyScript.js"></script> </head>
-    <body style="background-color: #333;">
+<body style="background-color: #333;">
     <nav class="navbar sfondo">
                 <a href="../index.php"><h1 class= "testonav">BnB Italia</h1></a>
                 <div style="float: right;margin-right: 10px;">
     </nav>
     <div class="nav">
         <div class="container text-center">
-<?php
-session_start();
-include "../Componets/Connessione.php";
+            <?php
+            session_start();
+            include "../Componets/Connessione.php";
+            
+            $connessione = mysqli_connect ($host, $root, $pass, $db) or die("Connessione non riuscita " . mysqli_connect_error() );
+            $query = "SELECT Email,Pass FROM db_progetto_finale.affituario;";
 
-$connessione = mysqli_connect($host, $root, $pass, $db) or die("Connessione non riuscita " . mysqli_connect_error());
-$query = "SELECT Email,Pass FROM db_progetto_finale.affituario;";
-$result = mysqli_query($connessione, $query) or die("Query fallita " . mysqli_error($connessione) . " " . mysqli_errno($connessione));
+            $result = mysqli_query ($connessione, $query) or
+            die ("Query fallita " . mysqli_error($connessione) . " " . mysqli_errno($connessione));
+            $controllo = false;
+            while ($row = mysqli_fetch_assoc ($result)) //solo associativo
+            {
+                if($_POST['Email'] == $row['Email'] || $_POST['Pass'] == $row['Pass']){
+                    $controllo = true;
+                }
+            }
+            $_SESSION['accesso']=false;
+            if($controllo == true){ 
 
-$controllo = false;
-while ($row = mysqli_fetch_assoc($result)) 
-{
-    if ($_POST['Email'] == $row['Email'] || $_POST['Pass'] == $row['Pass']) {
-        $controllo = true;
-    }
-}
-if ($controllo == true) {
+                $query2 = "SELECT Cod_Fiscale, Nome, Cognome, Data_nascita,Telefono   FROM affituario where Email = '".$_POST['Email']."'";
 
-    $query2 = "SELECT Cod_Fiscale, Nome, Cognome, Data_nascita,Telefono   FROM affituario where Email = '" . $_POST['Email'] . "'";
+                $result2 = mysqli_query ($connessione, $query2) or
+                die ("Query fallita " . mysqli_error($connessione) . " " . mysqli_errno($connessione));
 
-    $result2 = mysqli_query($connessione, $query2) or
-        die("Query fallita " . mysqli_error($connessione) . " " . mysqli_errno($connessione));
-
-    while ($row = mysqli_fetch_assoc($result2)) {
-        $_SESSION['CodiceFiscale'] = $row['Cod_Fiscale'];
-        $_SESSION['Nome'] = $row['Nome'];
-        $_SESSION['Cognome'] = $row['Cognome'];
-        $_SESSION['Data_di_nascita'] = $row['Data_nascita'];
-        $_SESSION['Telefono'] = $row['Telefono'];
-    }
-    if ($_SESSION['controlloIndex'] == 0) {
-        $_SESSION['accesso'] = true;
-        echo $_SESSION['Telefono'];
-        echo $_SESSION['Data_di_nascita'];
-        echo "<h1 class='testonav'>Accesso Effetuato</h1> <br>";
-        echo "<img src='../image/pollice_SU.jpg' width='200' height='200' style='border-radius:65px'> <br><br>";
-        echo "<a href='../index.php' class='btn button_neo'  style='color:white;' tabindex='-1' role='button' aria-disabled='true'>esci</a>";
-
-    }
-    else {
-        $_SESSION['accesso'] = true;
-        echo "<h1 class='testonav'>Accesso Effetuato</h1> <br>";
-        echo "<img src='../image/pollice_SU.jpg' width='200' height='200' style='border-radius:65px'> <br><br>";
-        echo "<a href='Pagamento.php' class='btn button_neo'  style='color:white; tabindex='-1' role='button' aria-disabled='true'>esci</a>";
-    }
-}
-else {
-    if ($_SESSION['controlloIndex'] == 0) {
-        $_SESSION['accesso'] = false;
-        echo "<h1 class='testonav'>Non esiste questo utente</h1> <br>";
-        echo "<img src='../image/pollice_GIU.jpg' width='200' height='200' style='border-radius:65px'> <br><br>";
-        echo "<a href='accedi.php' class='btn button_neo'  style='color:white; tabindex='-1' role='button' aria-disabled='true'>riprova</a>";
-        echo "<a href='../index.php' class='btn button_neo'  style='color:white; tabindex='-1' role='button' aria-disabled='true'>esci</a>";
-
-    }
-    else {
-        $_SESSION['accesso'] = false;
-        echo "<h1 class='testonav'>Non esiste questo utente</h1> <br>";
-        echo "<img src='../image/pollice_GIU.jpg' width='200' height='200' style='border-radius:65px'> <br><br>";
-        echo "<a href='accedi.php' class='btn button_neo'  style='color:white; tabindex='-1' role='button' aria-disabled='true'>riprova</a>";
-        echo "<a href='Pagamento.php' class='btn button_neo'  style='color:white; tabindex='-1' role='button' aria-disabled='true'>esci</a>";
-    }
-
-}
-?>
+                while ($row = mysqli_fetch_assoc ($result2)) //solo associativo
+                {
+                    $_SESSION['CodiceFiscale'] = $row['Cod_Fiscale'];
+                    $_SESSION['Nome'] = $row['Nome'];
+                    $_SESSION['Cognome']  = $row['Cognome'];
+                    $_SESSION['Data_di_nascita']  = $row['Data_nascita'];
+                    $_SESSION['Telefono'] = $row['Telefono'];
+                }
+                if($_SESSION['controlloIndex'] == true){
+                    $_SESSION['accesso']=true;
+                    echo "<h1 class='testonav'>Accesso Effetuato</h1> <br>";
+                    echo "<img src='../image/pollice_SU.jpg' width='200' height='200' style='border-radius:65px'> <br><br>";
+                    echo "<a href='../index.php' class='btn button_neo'  style='color:white;' tabindex='-1' role='button' aria-disabled='true'>esci</a>";
+                    
+                }else{
+                    $_SESSION['accesso']=true;
+                    echo "<h1 class='testonav'>Accesso Effetuato</h1> <br>";
+                    echo "<img src='../image/pollice_SU.jpg' width='200' height='200' style='border-radius:65px'> <br><br>";
+                    echo "<a href='Pagamento.php' class='btn button_neo'  style='color:white; tabindex='-1' role='button' aria-disabled='true'>esci</a>";
+                }
+            }else{
+                if($_SESSION['controlloIndex'] == true){
+                    $_SESSION['accesso']=false;
+                    echo "<h1 class='testonav'>Non esiste questo utente</h1> <br>";
+                    echo "<img src='../image/pollice_GIU.jpg' width='200' height='200' style='border-radius:65px'> <br><br>";
+                    echo "<a href='accedi.php' class='btn button_neo'  style='color:white; tabindex='-1' role='button' aria-disabled='true'>riprova</a>";
+                    echo "<a href='../index.php' class='btn button_neo'  style='color:white; tabindex='-1' role='button' aria-disabled='true'>esci</a>";
+                    
+                }else{
+                    $_SESSION['accesso']=false;
+                    echo "<h1 class='testonav'>Non esiste questo utente</h1> <br>";
+                    echo "<img src='../image/pollice_GIU.jpg' width='200' height='200' style='border-radius:65px'> <br><br>";
+                    echo "<a href='accedi.php' class='btn button_neo'  style='color:white; tabindex='-1' role='button' aria-disabled='true'>riprova</a>";
+                    echo "<a href='Pagamento.php' class='btn button_neo'  style='color:white; tabindex='-1' role='button' aria-disabled='true'>esci</a>";                    
+                }
+                
+            }
+            ?>
         </div>
     </div>
 </body>

@@ -2,8 +2,8 @@
 <html lang="it">
 <head>
     <?php
-    session_start();
-    ?>
+session_start();
+?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Style/MyStyle.css" >
@@ -79,75 +79,71 @@
         </div>
 </div>
 <?php
-    include "../Componets/Connessione.php";
+include "../Componets/Connessione.php";
 
-    $query = "SELECT  idStruttura,Nome,Locazione,Stanze,Bagni,PrezzoStruttura,imgPrincipale
+$query = "SELECT  idStruttura,Nome,Locazione,Stanze,Bagni,PrezzoStruttura,imgPrincipale
     FROM  struttura
-    where struttura.Locazione= '".$_POST['Dove']."'";
+    where struttura.Locazione= '" . $_POST['Dove'] . "'";
+$result = mysqli_query($connessione, $query) or
+    die("Query fallita " . mysqli_error($connessione) . " " . mysqli_errno($connessione));
 
-    $result = mysqli_query ($connessione, $query) or
-    die ("Query fallita " . mysqli_error($connessione) . " " . mysqli_errno($connessione));
+$Check_in = $_POST['Check-in'];
+$Check_out = $_POST['Check-out'];
 
-    $Check_in = $_POST['Check-in'];
-    $Check_out = $_POST['Check-out'];
-    
-    $differenza = strtotime($_POST['Check-out']) - strtotime($_POST['Check-in']);
+$differenza = strtotime($_POST['Check-out']) - strtotime($_POST['Check-in']);
+$giorni = abs($differenza / (60 * 60) / 24);
 
-    $giorni = abs($differenza/(60 * 60)/24);
+$idStruttura = 0;
 
-    $idStruttura = 0;
-
-    echo "<div class='divdestro' style='width: 55%;margin-top:5%;margin-right:5%'>
+echo "<div class='divdestro' style='width: 55%;margin-top:5%;margin-right:5%'>
     <div class='row'>";
-    while ($row = mysqli_fetch_assoc ($result)) 
-    {
-        
-        $idStruttura = $row['idStruttura'];
-        $PrezzoStruttura = $row['PrezzoStruttura'];
-        $prezzoTotale = 0;
-        $prezzoTotale = $PrezzoStruttura * $giorni  ; 
+while ($row = mysqli_fetch_assoc($result)) {
 
-        
-        $idStruttura = $row['idStruttura'];
-        $PrezzoStruttura = $row['PrezzoStruttura'];
-        $prezzoTotale = 0;
-        if($giorni == 0){
-         $prezzoTotale = $PrezzoStruttura * 1  ;
-        }else{
-            $prezzoTotale = $PrezzoStruttura * $giorni;
-        }
-        echo "<div class='col-4 ' style='background-color: #333;'>
-        <div class='card cardnath'>
-            <img src='";
-            echo $row['imgPrincipale'];
-            echo "' class='imgcard' alt='...'>
-            <div class='card-body cardbodynath' >
-                <h5 class='neonBianco' style='text-align:center;font-size:40px;'>Hotel</h5>
-                <p class='testonav'><b>";
-                echo $PrezzoStruttura; 
-                echo "€</b> a notte  .</p><p class='neonBianco' style='text-align:center;'><b>";
-                echo $prezzoTotale; 
-                echo"$ </b> in totale costa:</p>
-                <center>
-                <form action='Struttura.php' method='post'>
-                <input type='hidden' name='idStruttura' value='$idStruttura'>
-                <input type='submit' class='btn button_neo ' style='color:white;' value='prenota'>
-                </form>
-                </center>
-            </div>
-        </div>
-        </div>";
+    $idStruttura = $row['idStruttura'];
+    $PrezzoStruttura = $row['PrezzoStruttura'];
+    $prezzoTotale = 0;
+    $prezzoTotale = $PrezzoStruttura * $giorni;
+    $idStruttura = $row['idStruttura'];
+    $PrezzoStruttura = $row['PrezzoStruttura'];
+    $prezzoTotale = 0;
+    if ($giorni == 0) {
+        $prezzoTotale = $PrezzoStruttura * 1;
     }
-    echo "</div>
+    else {
+        $prezzoTotale = $PrezzoStruttura * $giorni;
+    }
+    echo "<div class='col-4 ' style='background-color: #333;'>
+            <div class='card cardnath'>
+                <img src='";
+                echo $row['imgPrincipale'];
+                echo "' class='imgcard' alt='...'>
+                <div class='card-body cardbodynath' >
+                    <h5 class='neonBianco' style='text-align:center;font-size:40px;'>Hotel</h5>
+                    <p class='testonav'><b>";
+                    echo $PrezzoStruttura;
+                    echo "€</b> a notte  .</p><p class='neonBianco' style='text-align:center;'><b>";
+                    echo $prezzoTotale;
+                    echo "$ </b> in totale costa:</p>
+                    <center>
+                    <form action='Struttura.php' method='post'>
+                    <input type='hidden' name='idStruttura' value='$idStruttura'>
+                    <input type='submit' class='btn button_neo ' style='color:white;' value='prenota'>
+                    </form>
+                    </center>
+                </div>
+            </div>
+        </div>";
+}
+echo "</div>
     </div>";
 
 
-    $_SESSION['Check-in'] = $_POST['Check-in'];
-    $_SESSION['Check-out'] = $_POST['Check-out'];
-    $_SESSION['adulti'] = $_POST['adulti'];
-    $_SESSION['Bambini'] = $_POST['Bambini'];
-    $_SESSION['Animali'] = $_POST['Animali'];
-    ?>
+$_SESSION['Check-in'] = $_POST['Check-in'];
+$_SESSION['Check-out'] = $_POST['Check-out'];
+$_SESSION['adulti'] = $_POST['adulti'];
+$_SESSION['Bambini'] = $_POST['Bambini'];
+$_SESSION['Animali'] = $_POST['Animali'];
+?>
         
         <main>
         <section>
